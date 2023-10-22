@@ -98,7 +98,6 @@ int main(void) {
           }
         } else {
           func_or(x, y, z);
-
           switch (conversion) {
           case 1:
             printf("The first number OR second binary number in binary form yeild: ");
@@ -140,6 +139,17 @@ int main(void) {
           if (error == 1) {
           } else {
             break;
+          }
+        }
+        while (1) {
+          printf("Enter the output base:\n1) Binary\n2) Octal\n3) Decimal\n4) "
+                 "Hexadecimal\n");
+          scanf("%d", &conversion);
+          if (conversion == 1 || conversion == 2 || conversion == 3 ||
+              conversion == 4) {
+            break;
+          } else {
+            printf("ERROR!\nPlease enter a valid command number.\n");
           }
         }
         if (choice == 3) {
