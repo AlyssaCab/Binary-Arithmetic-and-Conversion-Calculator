@@ -21,17 +21,6 @@ int main(void) {
       break;
     } else if (choice == 1 || choice == 2 || choice == 3 || choice == 4 ||
                choice == 5 || choice == 6) {
-      while (1) {
-        printf("Enter the output base:\n1) Binary\n2) Octal\n3) Decimal\n4) "
-               "Hexadecimal\n");
-        scanf("%d", &conversion);
-        if (conversion == 1 || conversion == 2 || conversion == 3 ||
-            conversion == 4) {
-          break;
-        } else {
-          printf("ERROR!\nPlease enter a valid command number.\n");
-        }
-      }
       if (choice == 1 || choice == 2) {
         while (1) {
           error = 0;
@@ -73,6 +62,17 @@ int main(void) {
             break;
           }
         }
+        while (1) {
+        printf("Enter the output base:\n1) Binary\n2) Octal\n3) Decimal\n4) "
+               "Hexadecimal\n");
+        scanf("%d", &conversion);
+        if (conversion == 1 || conversion == 2 || conversion == 3 ||
+            conversion == 4) {
+          break;
+        } else {
+          printf("ERROR!\nPlease enter a valid command number.\n");
+        }
+      }
         if (choice == 1) {
           func_and(x, y, z);
           switch (conversion) {
